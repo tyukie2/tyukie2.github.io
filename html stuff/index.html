@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<title>e-Money</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/maincss.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px; background: rgb(0, 0, 0);}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 80px;}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+
+  <!-- Avatar image in top left corner -->
+  <img src="../picture/virtualliteslogogreen.png" style="width:100%">
+
+  <a href="#" class="w3-button w3-bar-item  w3-padding-large  w3-deep-purple w3-hover-blue">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>Home</p>
+  </a>
+  <a href="#about" class="w3-button w3-bar-item  w3-padding-large w3-pale-green w3-hover-indigo">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>Profile</p>
+  </a>
+  <a href="#socialize" class="w3-button w3-bar-item  w3-padding-large w3-blue w3-hover-deep-purple">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>Socialize</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-indigo w3-hover-pale-green">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>Support</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">Home</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">Profile</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">Gallery</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">Get In Touch</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h3  style="text-align: left; margin-left: 20px;"><span class="w3-hide-small">Welcome To Virtualites.com...<br></span></h3>
+    <p>an all inclusive Social Network With Fun And Active At Home Activities.</p>
+    <!--slide show-->
+    <div class="tech-slideshow">
+      <div class="mover-1"></div>
+      <div class="mover-2"></div>
+    </div> 
+
+
+    <!--<img src="../picture/HDR.png" alt="image placement" >-->
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about1">
+
+    <hr style="width:300px; " class="w3-opacity">
+    <h2 class="w3-text-light-grey" style="text-align: left">Why Virtualites..?</h2>
+    <hr style="width: 300px; " class="w3-opacity">
+    <p>
+        Hello all, and welcome to a new way of socializing and 
+        meeting new people from all walks of life. This site is a great resource 
+        to introduce yourself in your most natural form, virtually. Set you profile 
+        preferences to meet and greet personas that you feel you would most appeal to, or try your 
+        luck with someone from the other side of the personality spectrum test. 
+        I highly encourage discussions with an open mindset, 
+        this will help you grow and have a more diverse outlook on life and others.Here is 
+        how it works, set up a profile, take a personality test, set your preference for virtual match ups 
+        ( locally or nationally), browse the categories for virtual trivia dating, couples dinner, join a discussion of your likings,
+          you can also join a group work out of your liking(Lifting, Yoga and few more to choose from). Most important is have fun!
+           This is what this site is for, share your ideas, take input and discussions. Improve your speaking skills, don’t be afraid. 
+           The promise is that you will be exposed personas either worldwide or locally and come together to socialize. 
+           There is no reason that one should ever feel lonely, no matter who you are, that’s my promise to you!
+
+    </p>
+    
+    <hr style="width:300px" class="w3-opacity">
+    <h3 class="w3-text-light-grey">Profile</h3>
+    <hr style="width:300px" class="w3-opacity">
+
+    
+
+    <p>Set up your profile, once you click the submit button, you will recieve an email to confirm your profile and to proceed to the next step (take the personality test)</p>
+    
+    <div class="w3-row w3-section" id="about">
+
+        <div class="w3-half w3-center w3-container w3-black w3-large" style="height:250px">
+          <h2>Create A Profile</h2>
+          <form action="/action_page.php" target="_blank">
+    
+            <p><input class="w3-input w3-padding-16" type="text" placeholder="Full Name" required name="Full Name"></p>
+            
+            <p><input class="w3-input w3-padding-16" type="text" placeholder="Valid Email" required name="Valid Email"></p>
+            
+              
+                <button class="w3-button w3-button-hover w3-pale-green w3-padding-large w3-hover-blue" type="submit">
+                <i class="fa fa-paper-plane"></i> CREATE PROFILE
+                </button>
+    
+              </form>
+        </div>
+
+        <div class="w3-half w3-center w3-large w3-black w3-text-white" style="height:250px">
+          <h2>Log In</h2>
+
+          <form action="/action_page.php" target="_blank">
+            <p><input class="w3-input w3-padding-16" type="text" placeholder="Profile Name" required name="Profile Name"></p>
+            <p><input class="w3-input w3-padding-16" type="text" placeholder="Password" required name="Password"></p>
+    
+            <button class="w3-button w3-button-hover w3-blue w3-padding-large w3-hover-pale-green" type="Log In">
+              <i class="fa fa-user w3-xxlarge"></i> LOG IN
+              </button>
+             </form> 
+    
+        </div>
+    
+      </div>
+    
+    <!-- Grid for portals-->
+    <hr style="width:300px; margin-top: 50px;" class="w3-opacity">
+    <div  id="socialize">
+        <h3 class="w3-text-light-grey">Socialize..!</h3>
+    </div>
+    
+    <hr style="width:300px;" class="w3-opacity">
+
+    <p> Plenty of Connections Are Down Below...Have Fun And Enjoy Your Stay</p>
+    
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-blue w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-deep-purple w3-xlarge w3-padding-32">Virtualite Trivia Dating</li>
+          <li class="w3-padding-16">Connect With People Locally / Worldwide</li>
+          <li class="w3-padding-16">Once you enter the virtual portal, you will be matched to your preferred personality type or a personality type opposite of yours, initially the screen will be blurred, until you and your partner get 5 correct answers, after which you will see each other, don’t get excited, you have 5 more questions to answer. Once either you answer 10 correct or your time expires, you will be now prompted continue to chat or find a new match. You will also have an option to friend request previous matches and add them to your network ( your network may be public or private). There are two options for Trivia dating, one with out or with wine/alcoholic beverages and one with. </li>
+          <li class="w3-deep-purple w3-padding-24">
+            <button class="w3-button w3-pale-green w3-padding-large w3-hover-blue">Virtual Trivia Dating</button>
+            <button class="w3-button w3-pale-green w3-padding-large w3-hover-blue">Tipsy Trivia</button>
+            <button class="w3-button w3-pale-green w3-padding-large w3-hover-blue">Virtual Poker</button>
+          </li>
+        </ul>
+      </div>
+      <!-- end of trivia dating-->
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-deep-purple w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-blue w3-xlarge w3-padding-32">Virtualite Gym Buddies</li>
+          <li class="w3-padding-16">Find Your Remote Work Out Buds</li>
+          <li class="w3-padding-16">Group Virtual Yoga</li>
+          <li class="w3-padding-26">Select from the following. Group Yoga, indoor cycling, indoor work outs, stretching. There is a schedule that accompanies the group activities thus don’t be late. These group work outs will be proctored and if you feel that you are above the current level, then level up!</li>
+          <li class="w3-padding-16">
+            <span class="w3-opacity">Join Live Session Or Check The Schedule.</span>
+          </li>
+          <li class="w3-blue w3-padding-24">
+            <button class="w3-button w3-pale-green w3-padding-large w3-hover-deep-purple">Join Live Group Work Out</button>
+            <button class="w3-button w3-pale-green w3-padding-large w3-hover-deep-purple">Calendar Dates</button>
+          </li>
+        </ul>
+      </div>   
+      
+    <!-- end of Dating/ Gym -->
+    </div>
+  
+    
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-pale-green w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-indigo w3-xlarge w3-padding-32 ">Just Virtualites</li>
+          <li class="w3-padding-16">Take yourself internationally. Indulge in guided subject discussions or just make friends.</li>
+          <li class="w3-padding-16">Multiple subjects of discussion, log on and see how many share your opinions</li>
+          <li class="w3-padding-16">Many group sizes to choose from</li>
+          <li class="w3-padding-16">Once you have selected your area of interest and group size, you will enter a virtual portal of discussion. Please keep it friendly, or if you are really that intense try the intense portal, each member has 120 seconds to reply and will be muted, you may forfeit your time to another persona if you feel like to. Insults of any kind will not be tolerated, and you profile will be flagged for review, thus keep it civil and put your best foot forward.</li>
+          <li class="w3-padding-16">
+            <span class="w3-opacity">1st Choose the size of your group. 2nd Choose the area of interest.</span>
+          </li>
+          <li class="w3-indigo w3-padding-24">
+            <button class="w3-button w3-pale-green w3-padding-large w3-hover-blue" style="margin-top:5px">One on One</button>
+            <button class="w3-button w3-pale-green  w3-padding-large w3-hover-blue" style="margin-top:5px">2-5</button>
+            <button class="w3-button w3-pale-green  w3-padding-large w3-hover-blue" style="margin-top:5px">5-8 (2 Minutes per turn)</button>
+            <!--button class="w3-button w3-pale-green  w3-padding-large w3-hover-blue" style="margin-top:5px">8-14 (2 Minutes per turn)</button-->
+          </li>
+          
+          <li class="w3-indigo w3-padding-24">
+          <button class="w3-button w3-pale-green  w3-padding-large w3-hover-blue"style="margin-top:5px">Cooking</button>
+          <button class="w3-button w3-pale-green  w3-padding-large w3-hover-blue"style="margin-top:5px">Business</button>
+          <button class="w3-button w3-pale-green  w3-padding-large w3-hover-blue"style="margin-top:5px">Sports</button>
+          <button class="w3-button w3-pale-green  w3-padding-large w3-hover-blue"style="margin-top:5px">Politics</button>
+          <button class="w3-button w3-pale-green  w3-padding-large w3-hover-blue"style="margin-top:5px">Life Style</button>
+          <button class="w3-button w3-pale-green  w3-padding-large w3-hover-blue"style="margin-top:5px">Celebraties</button>
+          <button class="w3-button w3-pale-green  w3-padding-large w3-hover-blue" style="margin-top:5px">Health</button>
+          <button class="w3-button w3-pale-green  w3-padding-large w3-hover-blue" style="margin-top:5px">Just Vurtualites</button>
+          
+
+          </li>
+        </ul>
+      </div>
+      <!-- end of virtualites -->
+      
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-indigo w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-pale-green w3-xlarge w3-padding-32">Virtualite Group Classes</li>
+          <li class="w3-padding-16">Indulge in learning and participating in Virtual group classes such as cooking, painting, arts and crafts, gardening and home improvement.</li>
+          <li class="w3-padding-26">Proctored Virtual group courses, enabling your ablities to the full extent in a group environment. Where are guest speakers are from with in the community</li>
+          <li class="w3-padding-16">
+            <span class="w3-opacity">Join Live Session Or Check The Schedule.</span>
+          </li>
+          <li class="w3-pale-green w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-indigo">Join Live Course</button>
+            <button class="w3-button w3-white w3-padding-large w3-hover-indigo">Calendar Dates</button>
+          </li>
+        </ul>
+      </div>
+</div>
+
+  <!-- End Group  Section -->
+
+  </div>
+
+
+<!-- Footer -->
+<div class="w3-row w3-section" id="contact">
+    <div class="w3-third w3-container w3-black w3-large" style="height:250px">
+      <h2>Contact Info</h2>
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Kirkland, US</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: 425-123-6500</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    </div>
+    <div class="w3-third w3-center w3-large w3-dark-grey w3-text-white" style="height:250px">
+      <h2>Contact Us</h2>
+      <p>If you have an idea.</p>
+      <p>What are you waiting for?</p>
+    </div>
+    <div class="w3-third w3-center w3-large w3-grey w3-text-white" style="height:250px">
+      <h2>Like Us</h2>
+      <i class="w3-xlarge fa fa-facebook-official"></i><br>
+      <i class="w3-xlarge fa fa-pinterest-p"></i><br>
+      <i class="w3-xlarge fa fa-twitter"></i><br>
+      <i class="w3-xlarge fa fa-flickr"></i><br>
+      <i class="w3-xlarge fa fa-linkedin"></i>
+    </div>
+  </div>
+  <div class="w3-container w3-text-grey">
+  </div>
+<!-- END PAGE CONTENT -->
+</div>
+</div>
+
+</body>
+</html>
