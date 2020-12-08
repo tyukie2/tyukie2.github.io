@@ -217,7 +217,8 @@ a{color:inherit}
 .w3-padding-16{padding-top:16px!important;padding-bottom:16px!important}.w3-padding-24{padding-top:24px!important;padding-bottom:24px!important}
 .w3-padding-32{padding-top:32px!important;padding-bottom:32px!important}.w3-padding-48{padding-top:48px!important;padding-bottom:48px!important}
 .w3-padding-26{padding-top:52px!important;padding-bottom:25px!important}.w3-padding-48{padding-top:48px!important;padding-bottom:48px!important}
-.w3-padding-64{padding-top:44px!important;padding-bottom:64px!important}
+.w3-padding-30{padding-top:32px!important;padding-bottom:32px!important}.w3-padding-48{padding-top:48px!important;padding-bottom:48px!important}
+.w3-padding-64{padding-top:33px!important;padding-bottom:64px!important}
 .w3-padding-top-64{padding-top:64px!important}
 .w3-padding-top-48{padding-top:48px!important}
 .w3-padding-top-32{padding-top:32px!important}
@@ -226,7 +227,7 @@ a{color:inherit}
 .w3-right{float:right!important}
 /*Nav links colors hover*/
 .w3-section
-.w3-button: hover {color:rgb(75, 75, 203)!important; background-color: white!important}
+.w3-button:hover {color:rgb(75, 75, 203)!important; background-color: white!important}
 .w3-transparent,.w3-hover-none:hover{background-color:transparent!important}
 .w3-hover-none:hover{box-shadow:none!important}
 /* Colors */
