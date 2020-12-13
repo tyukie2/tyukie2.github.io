@@ -101,38 +101,196 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <p>Set up your profile, once you click the submit button, you will recieve an email to confirm your profile and to proceed to the next step (take the personality test)</p>
     
     <div class="w3-row w3-section" id="about" >
-
-        <div class="w3-half w3-center w3-container w3-indigo w3-large w3-left-border" style="height:250px; ">
-          <h2>Create A Profile</h2>
-          <form action="/action_page.php" target="_blank">
     
-            <p><input class="w3-input w3-padding-16 w3-border-radius-10px" type="text" placeholder="Full Name" required name="Full Name"></p>
+      <div class="w3-half w3-center w3-container w3-indigo w3-large w3-left-border" style="height:250px; ">
+        <h2>Create A Profile</h2>
+        <form action="https://microsoft.com" target="_blank">
+          
+          <p><input class="w3-input w3-padding-16 w3-border-radius-10px" id="E-Mail" name="E-Mail" type="text" placeholder="E-Mail" required name="E-Mail"></p>
+          
+          <p><input class="w3-input w3-padding-16 w3-border-radius-10px" id="Password" name="Password" type="text" placeholder="Choose A Password" required name="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Your Password will contain at, least one number, one uppercase and lowercase letter, and at least 6 or more characters in Length" required></p>
+          
             
-            <p><input class="w3-input w3-padding-16 w3-border-radius-10px" type="text" placeholder="Valid Email" required name="Valid Email"></p>
-            
-              
-                <button class="w3-button w3-button-hover w3-pale-green w3-padding-large w3-hover-blue w3-border-radius-10px" type="submit">
-                <i class="fa fa-paper-plane"></i> CREATE PROFILE
-                </button>
-    
-              </form>
-        </div>
-
-        <div class="w3-half w3-center w3-large w3-deep-purple w3-text-white w3-right-border" style="height:250px;">
-          <h2>Log In</h2>
-
-          <form action="/action_page.php" target="_blank">
-            <p><input class="w3-input w3-padding-16 w3-border-radius-10px" type="text" placeholder="Profile Name" required name="Profile Name"></p>
-            <p><input class="w3-input w3-padding-16 w3-border-radius-10px" type="text" placeholder="Password" required name="Password"></p>
-    
-            <button class="w3-button w3-button-hover w3-blue w3-padding-large w3-hover-pale-green w3-border-radius-10px" type="Log In">
-              <i class="fa fa-user"></i> LOG IN
+              <button class="w3-button w3-button-hover w3-pale-green w3-padding-large w3-hover-blue w3-border-radius-10px" type="submit">
+              <i class="fa fa-paper-plane"></i> CREATE PROFILE
               </button>
-             </form> 
+  
+            </form>  
+      </div>   
     
-        </div>
-    
+      <div class="w3-half w3-center w3-large w3-deep-purple w3-text-white w3-right-border" style="height:250px;">
+        <h2>Log In</h2>
+        <form action="http://google.com" target="_blank">
+          
+          <p><input class="w3-input w3-padding-16 w3-border-radius-10px" id="E-Mail1" name="E-Mail1" type="text" placeholder="UserName" required name="Email1"></p>
+          
+          <p><input class="w3-input w3-padding-16 w3-border-radius-10px" id="Pass" name="Pass" type="text" placeholder="Your Password" required name="Pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Your Password will contain at, least one number, one uppercase and lowercase letter, and at least 6 or more characters in Length" required></p>
+          
+            
+              <button class="w3-button w3-button-hover w3-blue w3-padding-large w3-hover-blue w3-border-radius-10px" type="Log In">
+              <i class="fa fa-paper-plane"></i> LOG IN
+              </button>
+
+            </form>
       </div>
+    </div>
+
+    <div id="message">
+      <h3>Password must contain the following:</h3>
+      <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+      <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+      <p id="number" class="invalid">A <b>number</b></p>
+      <p id="length" class="invalid">Minimum <b>6 characters</b></p>
+    </div>
+
+    <script>
+      var myInput = document.getElementById("Password");
+      var myInput1 = document.getElementById("Pass");
+      var letter = document.getElementById("letter");
+      var capital = document.getElementById("capital");
+      var number = document.getElementById("number");
+      var length = document.getElementById("length");
+    
+
+      // When the user clicks on the password field, show the message box
+      myInput.onfocus = function() {
+        document.getElementById("message").style.display = "block";
+      }
+      
+      // When the user clicks outside of the password field, hide the message box
+      myInput.onblur = function() {
+        document.getElementById("message").style.display = "none";
+        
+        letter.classList.remove("valid");
+        letter.classList.add("invalid");
+      
+  
+        capital.classList.remove("valid");
+        capital.classList.add("invalid");
+
+        number.classList.remove("valid");
+        number.classList.add("invalid");
+
+        length.classList.remove("valid");
+        length.classList.add("invalid");
+      }
+      
+      // When the user starts to type something inside the password field
+      myInput.onkeyup = function() {
+        // Validate lowercase letters
+        var lowerCaseLetters = /[a-z]/g;
+        if(myInput.value.match(lowerCaseLetters)) {
+          letter.classList.remove("invalid");
+          letter.classList.add("valid");
+        } else {
+          letter.classList.remove("valid");
+          letter.classList.add("invalid");
+        }
+      
+        // Validate capital letters
+        var upperCaseLetters = /[A-Z]/g;
+        if(myInput.value.match(upperCaseLetters)) 
+        {
+          capital.classList.remove("invalid");
+          capital.classList.add("valid");
+        } 
+        else {
+          capital.classList.remove("valid");
+          capital.classList.add("invalid");
+        }
+      
+        // Validate numbers
+        var numbers = /[0-9]/g;
+        if(myInput.value.match(numbers)) {
+          number.classList.remove("invalid");
+          number.classList.add("valid");
+        } else {
+          number.classList.remove("valid");
+          number.classList.add("invalid");
+        }
+      
+        // Validate length
+        if(myInput.value.length >= 6) {
+          length.classList.remove("invalid");
+          length.classList.add("valid");
+        } else {
+          length.classList.remove("valid");
+          length.classList.add("invalid");
+        }
+      }
+ 
+  
+  // When the user clicks on the password field, show the message box
+  myInput1.onfocus = function() 
+  {
+    document.getElementById("message").style.display = "block";
+  }
+  
+  // When the user clicks outside of the password field, hide the message box
+  myInput1.onblur = function() {
+    document.getElementById("message").style.display = "none";
+    
+    letter.classList.remove("valid");
+        letter.classList.add("invalid");
+      
+  
+        capital.classList.remove("valid");
+        capital.classList.add("invalid");
+
+        number.classList.remove("valid");
+        number.classList.add("invalid");
+
+        length.classList.remove("valid");
+        length.classList.add("invalid");
+  }
+  
+  // When the user starts to type something inside the password field
+  myInput1.onkeyup = function() 
+  {
+    // Validate lowercase letters
+    var lowerCaseLetters = /[a-z]/g;
+    if(myInput1.value.match(lowerCaseLetters)) {
+      letter.classList.remove("invalid");
+      letter.classList.add("valid");
+    } else {
+      letter.classList.remove("valid");
+      letter.classList.add("invalid");
+  }
+  
+    // Validate capital letters
+    var upperCaseLetters = /[A-Z]/g;
+    if(myInput1.value.match(upperCaseLetters)) {
+      capital.classList.remove("invalid");
+      capital.classList.add("valid");
+    } else {
+      capital.classList.remove("valid");
+      capital.classList.add("invalid");
+    }
+  
+    // Validate numbers
+    var numbers = /[0-9]/g;
+    if(myInput1.value.match(numbers)) {
+      number.classList.remove("invalid");
+      number.classList.add("valid");
+    } else {
+      number1.classList.remove("valid");
+      number1.classList.add("invalid");
+    }
+  
+    // Validate length
+    if(myInput1.value.length >= 6) {
+      length.classList.remove("invalid");
+      length.classList.add("valid");
+    } else {
+      length.classList.remove("valid");
+      length.classList.add("invalid");
+    }
+  }
+  onload = function() {
+        document.getElementById("message").style.display = "none";
+      }
+  </script>
+      
     
     <!-- Grid for portals-->
     <hr style="width:300px; margin-top: 50px;" class="w3-opacity">
@@ -239,7 +397,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <h2>Contact Info</h2>
       <p><i class="fa fa-map-marker fa-fw w3-text-white  w3-margin-right "></i> Kirkland, US</p>
       <p><i class="fa fa-phone fa-fw w3-text-white  w3-margin-right"></i> Phone: 425-123-6500</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-margin-right"> </i> Email: mail@mail.com</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-margin-right"> </i><link href="mailto:mygit1@outlook.com"> Email Us</link></p>
     </div>
     <div class="w3-third w3-center w3-dark-grey w3-text-white w3-border-top" style="height:200px">
       <h2>Contact Us</h2>
@@ -248,11 +406,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
     <div class="w3-third w3-center w3-grey w3-text-white w3-border-top" style="height:200px">
       <h2>Like Us</h2>
-      <i class="fa fa-facebook-official"></i><br>
-      <i class=" fa fa-pinterest-p"></i><br>
-      <i class=" fa fa-twitter"></i><br>
-      <i class="fa fa-flickr"></i><br>
-      <i class="fa fa-linkedin"></i>
+      <i class="fa fa-facebook-official w3-hover-blue"></i><br>
+      <i class=" fa fa-pinterest-p w3-hover-blue""></i><br>
+      <i class=" fa fa-twitter w3-hover-blue""></i><br>
+      <i class="fa fa-flickr w3-hover-blue""></i><br>
+      <i class="fa fa-linkedin w3-hover-blue""></i>
     </div>
   </div>
   <div class="w3-container w3-text-grey">
