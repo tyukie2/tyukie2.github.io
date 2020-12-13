@@ -1,4 +1,4 @@
-/* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
+/* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes Added and Moddified  */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
@@ -26,6 +26,47 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
 [type=search]::-webkit-search-decoration{-webkit-appearance:none}
 ::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
 /* End extract */
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:block;
+  background: black;
+  color:white;
+  position: left;
+  clear: both;
+  padding: 20px;
+  margin-top: 5x;
+  margin-bottom: 20px;
+
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 15px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+
 
 
 .tech-slideshow 
